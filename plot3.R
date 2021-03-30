@@ -13,6 +13,7 @@ data2 = mutate(data2, FullDate = paste(Date, Time))
 data2$FullDate = dmy_hms(data2$FullDate)
 
 #Plotting the data
+#WEEKDAYS IN FRENCH BUT CORRESPOND TO THU, FRI AND SAT
 png("plot3.png")
 plot(data2$FullDate, data2$Sub_metering_1, ylab = "Energy sub metering", xlab = "", type = "l")
 lines(data2$FullDate, data2$Sub_metering_2, col = "red")

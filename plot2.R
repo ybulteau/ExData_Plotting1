@@ -13,7 +13,8 @@ data2 = data[data$Date %in% c("1/2/2007", "2/2/2007"),]
 data2 = mutate(data2, FullDate = paste(Date, Time)) 
 data2$FullDate = dmy_hms(data2$FullDate)
 
-#Plotting the data
+#Plotting the 
+#WEEKDAYS IN FRENCH BUT CORRESPOND TO THU, FRI AND SAT
 png("plot2.png")
 plot(data2$FullDate, data2$Global_active_power, ylab = "Global Active Power (kilowatts)", xlab = "", type = "l")
 dev.off()
